@@ -1,7 +1,7 @@
 <?php
 
 function getUsers(){
-return json_decode(file_get_contents('users.json'),true);
+return json_decode(file_get_contents('Users/user.json'),true);
 }
 
 function getUserById($id){
@@ -15,18 +15,29 @@ function getUserById($id){
 }
 
 function createUser($data){
-    $data['id']=rand(1,1000);
-    $json_data = json_encode($data);
-    file_put_contents('users.json',$json_data,FILE_APPEND);
+    $data['id']=rand(10000,20000);
+    $users=getUsers();
+    $users[]=$data;
+   putJSON($users);
 
 }
 
-function updateUser($id){
-    
+function updateUser($id,$data){
+    $users=getUsers();
+    foreach($users as $i => $user){
+     if($user['id']==$id){
+        $users[$i]=array_merge($user,$data);
+     }
+    }
+     putJSON($users);
 }
+
 
 
 function deleteUser($id){
     
 }
 
+function putJSON($data){
+  file_put_contents('Users/user.json',json_encode($data,JSON_PRETTY_PRINT));
+}

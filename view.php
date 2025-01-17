@@ -1,6 +1,6 @@
 <?php
 require 'partials/header.php';
-require 'users.php';
+require 'Users/users.php';
 
 if(!isset($_GET['id'])){
     include 'partials/not_found.php';

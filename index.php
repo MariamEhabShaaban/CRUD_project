@@ -1,5 +1,5 @@
 <?php
-require 'users.php';
+require 'Users/users.php';
 $users=getUsers();
 require 'partials/header.php';
 ?>

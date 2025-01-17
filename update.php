@@ -1,6 +1,6 @@
 <?php
 require 'partials/header.php';
-require 'users.php';
+require 'Users/users.php';
 
 if(!isset($_GET['id'])){
     include 'partials/not_found.php';
@@ -8,10 +8,15 @@ if(!isset($_GET['id'])){
    
 }
 $user=getUserById($_GET['id']);
+$user_id=$_GET['id'];
 if(!$user){
     include 'partials/not_found.php';
    
     exit;  
+}
+if($_SERVER['REQUEST_METHOD']==='POST'){
+    updateUser($user_id,$_POST);
+    header("location:index.php");
 }
 
 ?>

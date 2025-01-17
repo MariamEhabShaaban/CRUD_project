@@ -1,10 +1,11 @@
 <?php
 require 'partials/header.php';
-require 'users.php';
+require 'Users/users.php';
 
 if($_SERVER['REQUEST_METHOD']==='POST'){
 // CREATE USER FUNCTION
     createUser($_POST);
+    header("location:index.php");
 }
 
 ?>
