@@ -5,7 +5,7 @@ require 'partials/header.php';
 ?>
 <div class="container">
     <div>
-    <a href="create.php" class="btn btn-outline-info mt-5 w-100">Add User</a>
+    <a href="create.php" class="btn btn-outline-info mt-5 form-control">Add User</a>
     </div>
     <table class="table mt-5">
         <thead>
@@ -29,9 +29,9 @@ require 'partials/header.php';
                 <td><?php echo $user['phone']?></td>
                 <td><a href="<?php echo $user['website']?>"  target="_blank"><?php echo $user['website']?></a></td>
                 <td>
-                    <a href="view.php?id=<?php echo $user['id']?>" class="btn btn-outline-info">View</a>
-                    <a href="update.php?id=<?php echo $user['id']?>" class="btn btn-outline-secondary">Update</a>
-                    <a href="delete.php?id=<?php echo $user['id']?>" class="btn btn-outline-danger">Delete</a>
+                    <a href="view.php?id=<?php echo $user['id']?>" class="btn btn-outline-info mt-2">View</a>
+                    <a href="update.php?id=<?php echo $user['id']?>" class="btn btn-outline-secondary mt-2">Update</a>
+                    <a href="delete.php?id=<?php echo $user['id']?>" class="btn btn-outline-danger mt-2">Delete</a>
                 </td>
             </tr>
             <?php endforeach;?>

@@ -35,7 +35,13 @@ function updateUser($id,$data){
 
 
 function deleteUser($id){
-    
+   $users=getUsers();
+   foreach($users as $i => $user){
+    if($user['id']==$id){
+      array_splice($users,$i,1);
+    }
+   } 
+   putJSON($users);  
 }
 
 function putJSON($data){
