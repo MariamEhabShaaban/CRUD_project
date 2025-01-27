@@ -21,10 +21,21 @@ if(!$user){
         </div>
         <div class="card-body">
         <a href="update.php?id=<?php echo $user['id']?>" class="btn btn-outline-secondary">Update</a>
-        <a href="delete.php?id=<?php echo $user['id']?>" class="btn btn-outline-danger">Delete</a>
+        <form action="delete.php" method="POST" style="display:inline">
+            <input type="hidden" name="id" value="<?php echo $user['id']?>">
+            <button  class="btn btn-outline-danger">Delete</button>
+        </form>
         </div>
         <table class='table'>
     <tbody>
+        <tr>
+            <th>Image</th>
+            <td>
+                <?php if(isset($user['extension'])):?>
+                    <img src="<?php echo "images/${user['id']}.${user['extension']}"?>" alt="" class="w-25 p-3">
+                <?php endif ?>
+            </td>
+        </tr>
         <tr>
             <th>Name</th>
             <td><?php echo $user['name']?></td>

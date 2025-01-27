@@ -2,10 +2,38 @@
 require 'partials/header.php';
 require 'Users/users.php';
 
+$user=[
+    "id"=>"",
+    "name"=> "",
+    "username"=>"",
+    "email"=> "",
+    "phone"=> "",
+    "website"=> ""
+];
+
+$errors=[
+    "id"=>"",
+    "name"=> "",
+    "username"=>"",
+    "email"=> "",
+    "phone"=> "",
+    "website"=> ""
+];
+
 if($_SERVER['REQUEST_METHOD']==='POST'){
-// CREATE USER FUNCTION
-    createUser($_POST);
+
+ $is_valid=true;
+ $user=array_merge($user,$_POST);
+//  echo'<pre>';
+//  var_dump($user);
+//  echo'</pre>';
+//  exit;
+
+ $is_valid=Validate_User($user,$errors);
+ if($is_valid){
+    createUser($user);
     header("location:index.php");
+ }
 }
 
 ?>

@@ -2,6 +2,14 @@
 require 'partials/header.php';
 require 'Users/users.php';
 
+$errors=[
+    "id"=>"",
+    "name"=> "",
+    "username"=>"",
+    "email"=> "",
+    "phone"=> "",
+    "website"=> ""
+];
 if(!isset($_GET['id'])){
     include 'partials/not_found.php';
    exit;
@@ -15,8 +23,18 @@ if(!$user){
     exit;  
 }
 if($_SERVER['REQUEST_METHOD']==='POST'){
-    updateUser($user_id,$_POST);
+    $is_valid=true;
+    $user=array_merge($user,$_POST);
+    $is_valid=Validate_User($user,$errors);
+    if($is_valid){
+       
+        $user= updateUser($user_id,$_POST);
+      
+    if(isset($_FILES['user-image'])){
+        UploadImage($_FILES['user-image'],$user);
+    }
     header("location:index.php");
+}
 }
 
 ?>

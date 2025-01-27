@@ -1,55 +1,42 @@
 [
     {
-        "id": 10,
-        "name": "Clementina DuBuque",
-        "username": "Moriah.Stanton",
-        "email": "Rey.Padberg@karina.biz",
-        "phone": "024-648-3804",
-        "website": "ambrose.net"
-    },
-    {
-        "name": "John Doe",
-        "username": "john22",
-        "email": "",
-        "phone": "12345",
-        "website": "",
-        "id": 1879571,
-        "extension": "jpg"
-    },
-    {
-        "name": "menna",
-        "username": "mennaaaaa",
-        "email": "mennaehab2612@gmail.com",
-        "phone": "14923",
-        "website": "facebook.com",
+        "id": 9,
+        "name": "Daniel Taylor",
+        "username": "danielt",
+        "phone": "9012345678",
+        "email": "danielt@example.com",
+        "website": "www@danieltaylor.com",
         "submit": "Submit",
-        "id": 198
+        "extension": "webp"
     },
     {
-        "name": "malak",
-        "username": "maloka",
-        "email": "malak@gmail.com",
-        "phone": "78560",
-        "website": "facebook.com",
+        "id": 11,
+        "name": "Andrew Harris2",
+        "username": "andrewh",
+        "phone": "1234567891",
+        "email": "andrewh@example.com",
+        "website": "www@andrewharris.com",
         "submit": "Submit",
-        "id": 936
+        "extension": "jpeg"
     },
     {
-        "name": "mariam ehab",
-        "username": "mariam_ehab",
-        "email": "mariamehab26122003@gmail.com",
-        "phone": "5951620",
-        "website": "facebook.com",
+        "id": 12,
+        "name": "Megan White",
+        "username": "meganw",
+        "phone": "2345678902",
+        "email": "meganw@example.com",
+        "website": "www@meganwhite.com",
         "submit": "Submit",
-        "id": 694
+        "extension": "jpeg"
     },
     {
-        "name": "Patricia Lebsack11",
-        "username": "Patricia ",
-        "email": "Patricia@gmail.com",
-        "phone": "5951620",
-        "website": "facebook.com",
+        "id": 15,
+        "name": "Mark Anderson",
+        "username": "markaa",
+        "phone": "5678901235",
+        "email": "marka@example.com",
+        "website": "www@markanderson.com",
         "submit": "Submit",
-        "id": 16972
+        "extension": "jpeg"
     }
 ]
