@@ -24,11 +24,7 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
 
  $is_valid=true;
  $user=array_merge($user,$_POST);
-//  echo'<pre>';
-//  var_dump($user);
-//  echo'</pre>';
-//  exit;
-
+ 
  $is_valid=Validate_User($user,$errors);
  if($is_valid){
     createUser($user);
